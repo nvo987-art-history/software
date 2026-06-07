@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NVO987 Software Archive | Software Heritage Preservation</title>
+
+<meta name="description" content="NVO987 Software Archive provides permanent Software Heritage archival references for cryptographic and software development projects including SHA-256 and SHA-3 repositories.">
+
+<meta name="keywords" content="Software Heritage, SHA-256, SHA-3, Cryptography, Source Code Archive, Open Source, Software Preservation, NVO987">
+
+<meta name="author" content="NVO987">
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://software.nvo987.us">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NVO987 Software Archive">
+<meta property="og:description" content="Permanent Software Heritage archives and software preservation resources.">
+<meta property="og:url" content="https://software.nvo987.us">
+<meta property="og:site_name" content="NVO987 Software Archive">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NVO987 Software Archive">
+<meta name="twitter:description" content="Software preservation, cryptographic research archives and Software Heritage references.">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --gold:#d4af37;
+    --gold-light:#f5e7a1;
+    --black:#050505;
+    --card:#0d0d0d;
+    --border:rgba(212,175,55,.25);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:radial-gradient(circle at top,
+    #111 0%,
+    #080808 30%,
+    #000 100%);
+    color:#f5f5f5;
+    font-family:'Cormorant Garamond', serif;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,
+    rgba(212,175,55,.08),
+    transparent 70%);
+    top:-250px;
+    left:50%;
+    transform:translateX(-50%);
+    pointer-events:none;
+}
+
+.hero{
+    text-align:center;
+    padding:140px 20px 100px;
+}
+
+.logo{
+    font-family:'Playfair Display', serif;
+    font-size:6rem;
+    letter-spacing:10px;
+    font-weight:700;
+
+    background:linear-gradient(
+    180deg,
+    #fff7d1,
+    #f8d56c,
+    #d4af37,
+    #8b6b11);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+    0 0 25px rgba(212,175,55,.35);
+}
+
+.subtitle{
+    margin-top:15px;
+    letter-spacing:6px;
+    color:#b99a37;
+    text-transform:uppercase;
+    font-size:1rem;
+}
+
+.tagline{
+    max-width:900px;
+    margin:40px auto 0;
+    font-size:1.5rem;
+    line-height:1.8;
+    color:#d8d8d8;
+}
+
+.section{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:60px;
+
+    background:linear-gradient(
+    180deg,
+    #fff8d7,
+    #d4af37);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.03),
+    rgba(212,175,55,.04));
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+    padding:40px;
+
+    backdrop-filter:blur(20px);
+
+    transition:.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 0 40px rgba(212,175,55,.15),
+    inset 0 0 40px rgba(212,175,55,.04);
+}
+
+.card h3{
+    font-size:2rem;
+    margin-bottom:15px;
+
+    background:linear-gradient(
+    180deg,
+    #fff4c7,
+    #d4af37);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.card p{
+    font-size:1.2rem;
+    line-height:1.8;
+    color:#d4d4d4;
+}
+
+.feature{
+    margin-top:90px;
+
+    border:1px solid var(--border);
+
+    padding:70px;
+    border-radius:30px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(212,175,55,.05),
+    rgba(255,255,255,.01));
+}
+
+.feature h2{
+    font-size:4rem;
+    margin-bottom:20px;
+
+    background:linear-gradient(
+    180deg,
+    #fff8d0,
+    #d4af37);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.feature p{
+    font-size:1.4rem;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+    color:#d7d7d7;
+}
+
+.archive-links{
+    text-align:center;
+    margin-top:50px;
+}
+
+.archive-btn{
+    display:inline-block;
+    margin:15px;
+    padding:18px 35px;
+    border-radius:15px;
+    text-decoration:none;
+    color:#fff;
+    border:1px solid var(--border);
+    background:linear-gradient(
+    145deg,
+    rgba(212,175,55,.15),
+    rgba(255,255,255,.02));
+    transition:.4s ease;
+    font-size:1.1rem;
+}
+
+.archive-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 30px rgba(212,175,55,.25);
+}
+
+footer{
+    margin-top:120px;
+    border-top:1px solid rgba(212,175,55,.15);
+    text-align:center;
+    padding:40px;
+}
+
+.footer-brand{
+    font-size:1.2rem;
+    letter-spacing:5px;
+    color:#d4af37;
+}
+
+.footer-copy{
+    margin-top:10px;
+    color:#999;
+}
+
+@media(max-width:768px){
+
+.logo{
+    font-size:3.5rem;
+    letter-spacing:5px;
+}
+
+.feature h2{
+    font-size:2.5rem;
+}
+
+.archive-btn{
+    display:block;
+    margin:15px auto;
+    max-width:320px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1 class="logo">NVO987</h1>
+
+<div class="subtitle">
+SOFTWARE ARCHIVE · DIGITAL PRESERVATION · OPEN SOURCE
+</div>
+
+<p class="tagline">
+NVO987 Software Archive is dedicated to the long-term preservation,
+verification and accessibility of software projects. Through Software Heritage,
+source code repositories are permanently archived to ensure integrity,
+transparency and future availability for developers, researchers and the
+broader open-source community.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Software Heritage Archives
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>SHA-256 Archive</h3>
+<p>
+Permanent Software Heritage archival record preserving the source code,
+revision history and development state of the SHA-256 project for long-term
+public accessibility and verification.
+</p>
+</div>
+
+<div class="card">
+<h3>SHA-3 Archive</h3>
+<p>
+Archived cryptographic software repository maintained through Software
+Heritage, ensuring reproducibility, transparency and historical preservation.
+</p>
+</div>
+
+<div class="card">
+<h3>Digital Preservation</h3>
+<p>
+Long-term safeguarding of software artifacts, development histories and
+research materials through trusted archival infrastructure.
+</p>
+</div>
+
+<div class="card">
+<h3>Open Research</h3>
+<p>
+Supporting reproducible software research, source verification and open
+access to historical development records.
+</p>
+</div>
+
+</div>
+
+<div class="archive-links">
+
+<a class="archive-btn"
+href="https://archive.softwareheritage.org/swh:1:dir:c6c1694f69663721534e5ff89765df5c43aceb7e;origin=https://github.com/nvo987-art-history/sha256;visit=swh:1:snp:0e0c7fb168393afa588040a29bcc08aea685882a;anchor=swh:1:rev:4764b4501af5670eccf4bea333befbdfa47598bb"
+target="_blank">
+View SHA-256 Archive
+</a>
+
+<a class="archive-btn"
+href="https://archive.softwareheritage.org/swh:1:dir:9ca38a7c579f6514320d6348fda4e13deb84f368;origin=https://github.com/nvo987-art-history/sha3;visit=swh:1:snp:03305f0c4d8de543557650541a9811e685e44cf1;anchor=swh:1:rev:29f507b92f6523555438a8cb950be2824958c864"
+target="_blank">
+View SHA-3 Archive
+</a>
+
+</div>
+
+<div class="feature">
+
+<h2>NVO987 SOFTWARE ARCHIVE</h2>
+
+<p>
+A professional repository portal focused on software preservation,
+cryptographic research references and long-term source code archiving.
+By leveraging Software Heritage infrastructure, development artifacts remain
+accessible, verifiable and preserved for future generations of researchers,
+developers and digital historians.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-brand">
+NVO987
+</div>
+
+<div class="footer-copy">
+© 2026 NVO987 Software Archive · All Rights Reserved
+</div>
+
+</footer>
+
+</body>
+</html>
