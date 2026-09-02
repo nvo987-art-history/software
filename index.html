@@ -1,783 +1,1086 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVO987 Software Archive | Software Heritage Preservation | Nicholas Van-Orton</title>
 
-<title>NVO987 Software Archive | Software Heritage Preservation | Nicholas Van-Orton</title>
+  <meta name="description" content="NVO987 is a multidisciplinary artistic and cultural initiative exploring the intersections of visual culture and art history. NVO987 Software Archive provides permanent Software Heritage archival references for cryptographic software, source code preservation, SHA-256 and SHA3 repositories, integrity verification, and long-term digital preservation.">
 
-<meta name="description" content="NVO987 is a multidisciplinary artistic and cultural initiative exploring the intersections of visual culture and art history. NVO987 Software Archive provides permanent Software Heritage archival references for cryptographic software, source code preservation, SHA-256 and SHA3 repositories, integrity verification, and long-term digital preservation.">
+  <meta name="keywords" content="NVO987, Software Heritage, Software Archive, Software Preservation, Source Code Archive, Open Source, Cryptography, SHA-256, SHA3, SHA3-256, Hash, Integrity Verification, Digital Preservation, GitHub Archive, Research Software">
 
-<meta name="keywords" content="NVO987, Software Heritage, Software Archive, Software Preservation, Source Code Archive, Open Source, Cryptography, SHA-256, SHA3, SHA3-256, Hash, Integrity Verification, Digital Preservation, GitHub Archive, Research Software">
+  <meta name="author" content="Nicholas Van-Orton">
+  <meta name="creator" content="Nicholas Van-Orton">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 
-<meta name="author" content="Nicholas Van-Orton">
-<meta name="creator" content="Nicholas Van-Orton">
+  <meta name="theme-color" content="#171a1d">
+  <meta name="color-scheme" content="light">
 
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://software.nvo987.us">
+  <link rel="me" href="https://identity.nvo987.us">
 
-<meta name="theme-color" content="#050505">
-<meta name="color-scheme" content="dark">
+  <meta name="did" content="did:web:identity.nvo987.us">
 
-<link rel="canonical" href="https://software.nvo987.us">
-<link rel="me" href="https://identity.nvo987.us">
+  <!-- DID document -->
+  <link rel="alternate" type="application/did+json" href="https://identity.nvo987.us/.well-known/did.json">
 
-<meta name="did" content="did:web:identity.nvo987.us">
+  <!-- DID domain linkage proof -->
+  <link rel="alternate" type="application/did+ld+json" href="https://identity.nvo987.us/.well-known/did-configuration.json">
 
-<!-- DID document -->
-<link rel="alternate" type="application/did+json" href="https://identity.nvo987.us/.well-known/did.json">
+  <!-- Identity authority -->
+  <link rel="me" href="https://identity.nvo987.us">
 
-<!-- DID domain linkage proof -->
-<link rel="alternate" type="application/did+ld+json" href="https://identity.nvo987.us/.well-known/did-configuration.json">
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
 
-<!-- Canonical DID -->
-<meta name="did" content="did:web:identity.nvo987.us">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-<!-- Identity authority -->
-<link rel="me" href="https://identity.nvo987.us">
+  <link rel="manifest" href="/manifest.json">
 
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#f5f1e8">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="NVO987 Software Archive">
-<meta property="og:title" content="NVO987 Software Archive | Software Heritage Preservation">
-<meta property="og:description" content="Permanent Software Heritage archives for cryptographic software, source code preservation, integrity verification, and long-term digital research.">
-<meta property="og:url" content="https://software.nvo987.us">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://software.nvo987.us/og-image.jpg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NVO987 Software Archive">
+  <meta property="og:title" content="NVO987 Software Archive | Software Heritage Preservation">
+  <meta property="og:description" content="Permanent Software Heritage archives for cryptographic software, source code preservation, integrity verification, and long-term digital research.">
+  <meta property="og:url" content="https://software.nvo987.us">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://software.nvo987.us/og-image.jpg">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NVO987 Software Archive">
-<meta name="twitter:description" content="Permanent Software Heritage archives and software preservation resources for cryptographic research and open-source projects.">
-<meta name="twitter:image" content="https://software.nvo987.us/og-image.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NVO987 Software Archive">
+  <meta name="twitter:description" content="Permanent Software Heritage archives and software preservation resources for cryptographic research and open-source projects.">
+  <meta name="twitter:image" content="https://software.nvo987.us/og-image.jpg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:opsz,wght@5..1200,500;5..1200,600;5..1200,700&display=swap" rel="stylesheet">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://nvo987.fr/#organization",
-  "name": "NVO987 – Culture Visuelle Moderne et Contemporaine",
-  "url": "https://nvo987.fr/",
-  "sameAs": [
-    "https://www.wikidata.org/wiki/Q141086020",
-    "https://www.openstreetmap.org/node/1409757849"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "44 Rue Pasquier",
-    "postalCode": "75008",
-    "addressLocality": "Paris",
-    "addressCountry": "FR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 48.8748353,
-    "longitude": 2.3240104
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://nvo987.fr/#organization",
+    "name": "NVO987 – Culture Visuelle Moderne et Contemporaine",
+    "url": "https://nvo987.fr/",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q141086020",
+      "https://www.openstreetmap.org/node/1409757849"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "44 Rue Pasquier",
+      "postalCode": "75008",
+      "addressLocality": "Paris",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.8748353,
+      "longitude": 2.3240104
+    }
   }
-}
-</script>
+  </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-       "@type": "Person",
-       "@id": "https://nvo987.us#person",
-       "name": "Nicholas Van-Orton",
-       "jobTitle": "Independent researcher, founder of NVO987 Association",
-       "url": "https://nvo987.us",
-       "memberOf": {
-       "@id": "https://nvo987.fr#organization"
-       },
-       "identifier": {
-       "@type": "PropertyValue",
-       "propertyID": "DID Document",
-        "value": "https://identity.nvo987.us/.well-known/did.json"
-           }, 
-            "sameAs": [
-            "https://nexarium.us",
-             "https://nvo987.us",
-             "https://nvo987.eu",
-             "https://nvo987.fr",
-             "https://nvo987.ai.in",
-             "https://did.ai.in",
-             "https://kellycode.us",
-             "https://identity.ai.in",
-	         "https://nvo987.in",
-             "https://web3.internet.in", 
-             "https://delaunaybook.us", 
-             "https://delaunaybook.eu", 
-             "https://osf.io/t8bek/", 
-             "https://orcid.org/0009-0007-4628-1871",
-	         "https://isni.org/isni/0000000529640885",
-             "https://www.wikidata.org/wiki/Q137675227",
-             "https://www.wikidata.org/wiki/Q140936124",
-             "https://www.wikidata.org/wiki/Q140529224",
-             "https://www.wikidata.org/wiki/Q140528834",
-             "https://www.wikidata.org/wiki/Q137674546", 
-             "https://meta.wikimedia.org/wiki/User:NVO987-ASSOCIATION",
-	         "https://independent.academia.edu/nvo987",
-	         "https://www.linkedin.com/in/nvo987/",
-	         "https://profile.hcommons.org/members/nicholasvanorton/",
-             "https://www.webofscience.com/wos/author/record/PDY-1682-2025",
-             "https://www.researchgate.net/profile/Nicholas-Van-Orton",
-             "https://www.lens.org/lens/profile/nicholas-van-orton/",
-             "https://openalex.org/authors/A5120949417",
-             "https://cv.hal.science/van-orton-nicholas",
-             "https://scholar.google.com/citations?user=iRM-GNQAAAAJ&hl",
-	         "https://app.ens.domains/nvo987.eth",
-             "https://nvo987.eth.limo/",
-	         "https://archive.org/details/@nicholas_van-orton",
-             "https://bsky.app/profile/nvo987.us",
-             "https://gravatar.com/nvo987",
-             "https://europepmc.org/authors/0009-0007-4628-1871",
-	         "https://github.com/nvo987-art-history",
-	         "https://github.com/nvo987",
-	          "https://x.com/nvo987",
-      "https://instagram.com/nvo987/",
-      "https://www.facebook.com/nvo987/",
-      "https://www.threads.com/@nvo987",
-      "https://www.tiktok.com/@nvo987",
-      "https://www.snapchat.com/@art-nvo987",
-      "https://mastodon.social/@nvo987",
-      "https://mastodon.art/@nvo987",
-      "https://pixelfed.social/nvo987",
-      "https://misskey.art/@nvo987",
-      "https://misskey.design/@nvo987",
-      "https://smugcat.moe/@nvo987",
-      "https://www.youtube.com/@nvo987-art-history",
-      "https://nvo987.substack.com/",
-      "https://pinterest.com/nvo987identity/",
-      "https://open.spotify.com/user/uti1pape8u8fm5vcoxfq23hdo",
-      "https://www.twitch.tv/nvo987/",
-      "https://www.reddit.com/user/Grand_Service448/",
-      "https://t.me/nvo987",
-      "https://wa.me/36702674440", 
-	   "https://gitlab.com/nvo987-art-history"
-          ]
-        },
-        {
-  "@type": "Organization",
-  "@id": "https://nvo987.fr#organization",
-  "name": "NVO987 – Culture Visuelle Moderne et Contemporaine Association",
-  "alternateName": [
-    "NVO987 Association",
-    "NVO987 – Culture Visuelle Moderne et Contemporaine"
-  ],
-  "url": "https://nvo987.fr",
-  "foundingDate": "2026",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "44 Rue Pasquier",
-    "postalCode": "75008",
-    "addressLocality": "Paris",
-    "addressCountry": "FR"
-  },
-  "founder": {
-    "@id": "https://nvo987.us#person"
-  }
-},
-        {
-      "@type": "Book",
-      "@id": "https://delaunaybook.us/#book-hu-print",
-      "name": "A szín mint generatív elv Sonia Delaunay életművében",
-      "url": "https://delaunaybook.us",
-      "inLanguage": "hu",
-      "bookFormat": "https://schema.org/Paperback",
-      "author": {
-        "@id": "https://nvo987.us#person"
-      },
-      "publisher": {
-        "@id": "https://nvo987.fr#organization"
-      },
-      "isbn": "978-615-83133-0-8",
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "DOI",
-        "value": "10.17613/y22fc-g0f98"
-      },
-      "sameAs": [
-        "https://doi.org/10.17613/y22fc-g0f98"
-      ]
-    },
-
-    {
-      "@type": "Book",
-      "@id": "https://delaunaybook.us/#book-hu-pdf",
-      "name": "A szín mint generatív elv Sonia Delaunay életművében (PDF)",
-      "url": "https://delaunaybook.us",
-      "inLanguage": "hu",
-      "bookFormat": "https://schema.org/EBook",
-      "author": {
-        "@id": "https://nvo987.us#person"
-      },
-      "publisher": {
-        "@id": "https://nvo987.fr#organization"
-      },
-      "isbn": "978-615-83133-1-5",
-      "isPartOf": {
-        "@id": "https://delaunaybook.us/#book-hu-print"
-      }
-    },
-
-    {
-      "@type": "Book",
-      "@id": "https://delaunaybook.us/#book-hu-epub",
-      "name": "A szín mint generatív elv Sonia Delaunay életművében (EPUB)",
-      "url": "https://delaunaybook.us",
-      "inLanguage": "hu",
-      "bookFormat": "https://schema.org/EBook",
-      "author": {
-        "@id": "https://nvo987.us#person"
-      },
-      "publisher": {
-        "@id": "https://nvo987.fr#organization"
-      },
-      "isbn": "978-615-83133-2-2",
-      "isPartOf": {
-        "@id": "https://delaunaybook.us/#book-hu-print"
-      }
-    },
-    {
-      "@type": "Book",
-      "@id": "https://delaunaybook.us/#book-en-print",
-      "name": "Color as a Generative Principle in the Work of Sonia Delaunay",
-      "url": "https://delaunaybook.us",
-      "inLanguage": "en",
-      "bookFormat": "https://schema.org/Paperback",
-      "author": {
-        "@id": "https://nvo987.us#person"
-      },
-      "publisher": {
-        "@id": "https://nvo987.fr#organization"
-      },
-      "isbn": "978-615-83133-5-3",
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "DOI",
-        "value": "10.17613/802rd-bjr69"
-      },
-      "sameAs": [
-        "https://doi.org/10.17613/802rd-bjr69"
-      ]
-    },
-    {
-      "@type": "Book",
-      "@id": "https://delaunaybook.us/#book-en-epub",
-      "name": "Color as a Generative Principle in the Work of Sonia Delaunay (EPUB)",
-      "url": "https://delaunaybook.us",
-      "inLanguage": "en",
-      "bookFormat": "https://schema.org/EBook",
-      "author": {
-        "@id": "https://nvo987.us#person"
-      },
-      "publisher": {
-        "@id": "https://nvo987.fr#organization"
-      },
-      "isbn": "978-615-83133-6-0",
-      "isPartOf": {
-        "@id": "https://delaunaybook.us/#book-en-print"
-      }
-    },
-    {
-      "@type": "Book",
-      "@id": "https://delaunaybook.us/#book-en-pdf",
-      "name": "Color as a Generative Principle in the Work of Sonia Delaunay (PDF)",
-      "url": "https://delaunaybook.us",
-      "inLanguage": "en",
-      "bookFormat": "https://schema.org/EBook",
-      "author": {
-        "@id": "https://nvo987.us#person"
-      },
-      "publisher": {
-        "@id": "https://nvo987.fr#organization"
-      },
-      "isbn": "9786150260921",
-      "isPartOf": {
-        "@id": "https://delaunaybook.us/#book-en-print"
-      }
-    },
-    {
-      "@type": "Book",
-      "@id": "https://doi.org/10.17613/y22fc-g0f98",
-      "name": "A szín mint generatív elv Sonia Delaunay életművében",
-      "url": "https://doi.org/10.17613/y22fc-g0f98",
-      "author": {
-        "@id": "https://nvo987.us#person"
-      },
-      "inLanguage": "hu",
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "DOI",
-        "value": "10.17613/y22fc-g0f98"
-      }
-    },
-    {
-      "@type": "Book",
-      "@id": "https://doi.org/10.17613/802rd-bjr69",
-      "name": "Color as a Generative Principle in the Work of Sonia Delaunay",
-      "url": "https://doi.org/10.17613/802rd-bjr69",
-      "author": {
-        "@id": "https://nvo987.us#person"
-      },
-      "inLanguage": "en",
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "DOI",
-        "value": "10.17613/802rd-bjr69"
-      }
-    },
-    {
-      "@type": "ScholarlyArticle",
-      "@id": "https://doi.org/10.2139/ssrn.6007654",
-      "name": "Color as a Generative Principle in the Work of Sonia Delaunay",
-      "headline": "Color as a Generative Principle in the Work of Sonia Delaunay",
-      "image": "https://delaunaybook.us/images/image.png",
-      "url": "https://doi.org/10.2139/ssrn.6007654",
-      "author": {
-        "@id": "https://nvo987.us#person"
-      },
-      "inLanguage": "en",
-      "isBasedOn": {
-        "@id": "https://delaunaybook.us/#book-en-print"
-      },
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "DOI",
-        "value": "10.2139/ssrn.6007654"
-      },
-      "sameAs": [
-        "https://doi.org/10.2139/ssrn.6007654"
-      ]
-    },
-    {
-      "@type": "ScholarlyArticle",
-      "@id": "https://doi.org/10.2139/ssrn.6131506",
-      "name": "Interdisciplinary Foundation Edition",
-      "headline": "Interdisciplinary Foundation Edition",
-      "image": "https://delaunaybook.us/images/image.png",
-      "url": "https://doi.org/10.2139/ssrn.6131506",
-      "author": {
-        "@id": "https://nvo987.us#person"
-      },
-      "inLanguage": "en",
-      "isBasedOn": {
-        "@id": "https://delaunaybook.us/#book-en-print"
-      },
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "DOI",
-        "value": "10.2139/ssrn.6131506"
-      },
-      "sameAs": [
-        "https://doi.org/10.2139/ssrn.6131506"
-      ]
-    },
-    {
-      "@type": "CreativeWork",
-      "@id": "https://archive.org/details/v-9-1-color-as-a-generative-principle-in-the-work-of-sonia-delaunay",
-      "name": "V.9.1 — Color as a Generative Principle in the Work of Sonia Delaunay",
-      "url": "https://archive.org/details/v-9-1-color-as-a-generative-principle-in-the-work-of-sonia-delaunay",
-      "author": {
-        "@id": "https://nvo987.us#person"
-      },
-      "about": {
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
         "@type": "Person",
-        "name": "Sonia Delaunay"
+        "@id": "https://nvo987.us#person",
+        "name": "Nicholas Van-Orton",
+        "jobTitle": "Independent researcher, founder of NVO987 Association",
+        "url": "https://nvo987.us",
+        "memberOf": {
+          "@id": "https://nvo987.fr#organization"
+        },
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "DID Document",
+          "value": "https://identity.nvo987.us/.well-known/did.json"
+        },
+        "sameAs": [
+          "https://nexarium.us",
+          "https://nvo987.us",
+          "https://nvo987.eu",
+          "https://nvo987.fr",
+          "https://nvo987.ai.in",
+          "https://did.ai.in",
+          "https://kellycode.us",
+          "https://identity.ai.in",
+          "https://nvo987.in",
+          "https://web3.internet.in",
+          "https://delaunaybook.us",
+          "https://delaunaybook.eu",
+          "https://osf.io/t8bek/",
+          "https://orcid.org/0009-0007-4628-1871",
+          "https://isni.org/isni/0000000529640885",
+          "https://www.wikidata.org/wiki/Q137675227",
+          "https://www.wikidata.org/wiki/Q140936124",
+          "https://www.wikidata.org/wiki/Q140529224",
+          "https://www.wikidata.org/wiki/Q140528834",
+          "https://www.wikidata.org/wiki/Q137674546",
+          "https://meta.wikimedia.org/wiki/User:NVO987-ASSOCIATION",
+          "https://independent.academia.edu/nvo987",
+          "https://www.linkedin.com/in/nvo987/",
+          "https://profile.hcommons.org/members/nicholasvanorton/",
+          "https://www.webofscience.com/wos/author/record/PDY-1682-2025",
+          "https://www.researchgate.net/profile/Nicholas-Van-Orton",
+          "https://www.lens.org/lens/profile/nicholas-van-orton/",
+          "https://openalex.org/authors/A5120949417",
+          "https://cv.hal.science/van-orton-nicholas",
+          "https://scholar.google.com/citations?user=iRM-GNQAAAAJ&hl",
+          "https://app.ens.domains/nvo987.eth",
+          "https://nvo987.eth.limo/",
+          "https://archive.org/details/@nicholas_van-orton",
+          "https://bsky.app/profile/nvo987.us",
+          "https://gravatar.com/nvo987",
+          "https://europepmc.org/authors/0009-0007-4628-1871",
+          "https://github.com/nvo987-art-history",
+          "https://github.com/nvo987",
+          "https://x.com/nvo987",
+          "https://instagram.com/nvo987/",
+          "https://www.facebook.com/nvo987/",
+          "https://www.threads.com/@nvo987",
+          "https://www.tiktok.com/@nvo987",
+          "https://www.snapchat.com/@art-nvo987",
+          "https://mastodon.social/@nvo987",
+          "https://mastodon.art/@nvo987",
+          "https://pixelfed.social/nvo987",
+          "https://misskey.art/@nvo987",
+          "https://misskey.design/@nvo987",
+          "https://smugcat.moe/@nvo987",
+          "https://www.youtube.com/@nvo987-art-history",
+          "https://nvo987.substack.com/",
+          "https://pinterest.com/nvo987identity/",
+          "https://open.spotify.com/user/uti1pape8u8fm5vcoxfq23hdo",
+          "https://www.twitch.tv/nvo987/",
+          "https://www.reddit.com/user/Grand_Service448/",
+          "https://t.me/nvo987",
+          "https://wa.me/36702674440",
+          "https://gitlab.com/nvo987-art-history"
+        ]
       },
-      "isBasedOn": {
-        "@id": "https://delaunaybook.us/#book-en"
+      {
+        "@type": "Organization",
+        "@id": "https://nvo987.fr#organization",
+        "name": "NVO987 – Culture Visuelle Moderne et Contemporaine Association",
+        "alternateName": [
+          "NVO987 Association",
+          "NVO987 – Culture Visuelle Moderne et Contemporaine"
+        ],
+        "url": "https://nvo987.fr",
+        "foundingDate": "2026",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "44 Rue Pasquier",
+          "postalCode": "75008",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        },
+        "founder": {
+          "@id": "https://nvo987.us#person"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://delaunaybook.us/#book-hu-print",
+        "name": "A szín mint generatív elv Sonia Delaunay életművében",
+        "url": "https://delaunaybook.us",
+        "inLanguage": "hu",
+        "bookFormat": "https://schema.org/Paperback",
+        "author": {
+          "@id": "https://nvo987.us#person"
+        },
+        "publisher": {
+          "@id": "https://nvo987.fr#organization"
+        },
+        "isbn": "978-615-83133-0-8",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "DOI",
+          "value": "10.17613/y22fc-g0f98"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://delaunaybook.us/#book-hu-pdf",
+        "name": "A szín mint generatív elv Sonia Delaunay életművében (PDF)",
+        "url": "https://delaunaybook.us",
+        "inLanguage": "hu",
+        "bookFormat": "https://schema.org/EBook",
+        "author": {
+          "@id": "https://nvo987.us#person"
+        },
+        "publisher": {
+          "@id": "https://nvo987.fr#organization"
+        },
+        "isbn": "978-615-83133-1-5"
+      },
+      {
+        "@type": "Book",
+        "@id": "https://delaunaybook.us/#book-hu-epub",
+        "name": "A szín mint generatív elv Sonia Delaunay életművében (EPUB)",
+        "url": "https://delaunaybook.us",
+        "inLanguage": "hu",
+        "bookFormat": "https://schema.org/EBook",
+        "author": {
+          "@id": "https://nvo987.us#person"
+        },
+        "publisher": {
+          "@id": "https://nvo987.fr#organization"
+        },
+        "isbn": "978-615-83133-2-2"
+      },
+      {
+        "@type": "Book",
+        "@id": "https://delaunaybook.us/#book-en-print",
+        "name": "Color as a Generative Principle in the Work of Sonia Delaunay",
+        "url": "https://delaunaybook.us",
+        "inLanguage": "en",
+        "bookFormat": "https://schema.org/Paperback",
+        "author": {
+          "@id": "https://nvo987.us#person"
+        },
+        "publisher": {
+          "@id": "https://nvo987.fr#organization"
+        },
+        "isbn": "978-615-83133-5-3",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "DOI",
+          "value": "10.17613/802rd-bjr69"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://delaunaybook.us/#book-en-epub",
+        "name": "Color as a Generative Principle in the Work of Sonia Delaunay (EPUB)",
+        "url": "https://delaunaybook.us",
+        "inLanguage": "en",
+        "bookFormat": "https://schema.org/EBook",
+        "author": {
+          "@id": "https://nvo987.us#person"
+        },
+        "publisher": {
+          "@id": "https://nvo987.fr#organization"
+        },
+        "isbn": "978-615-83133-6-0"
+      },
+      {
+        "@type": "Book",
+        "@id": "https://delaunaybook.us/#book-en-pdf",
+        "name": "Color as a Generative Principle in the Work of Sonia Delaunay (PDF)",
+        "url": "https://delaunaybook.us",
+        "inLanguage": "en",
+        "bookFormat": "https://schema.org/EBook",
+        "author": {
+          "@id": "https://nvo987.us#person"
+        },
+        "publisher": {
+          "@id": "https://nvo987.fr#organization"
+        },
+        "isbn": "9786150260921"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://doi.org/10.2139/ssrn.6007654",
+        "name": "Color as a Generative Principle in the Work of Sonia Delaunay",
+        "headline": "Color as a Generative Principle in the Work of Sonia Delaunay",
+        "url": "https://doi.org/10.2139/ssrn.6007654",
+        "author": {
+          "@id": "https://nvo987.us#person"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://doi.org/10.2139/ssrn.6131506",
+        "name": "Interdisciplinary Foundation Edition",
+        "headline": "Interdisciplinary Foundation Edition",
+        "url": "https://doi.org/10.2139/ssrn.6131506",
+        "author": {
+          "@id": "https://nvo987.us#person"
+        },
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --ink: #171a1d;
+      --ink-soft: #535a60;
+      --paper: #f5f1e8;
+      --paper-deep: #e9e2d5;
+      --surface: #fbf9f4;
+      --line: rgba(23, 26, 29, 0.14);
+      --line-strong: rgba(23, 26, 29, 0.24);
+      --accent: #9a7750;
+      --accent-deep: #725431;
+      --accent-light: #d7c2a0;
+      --white: #ffffff;
+      --shadow: 0 22px 60px rgba(23, 26, 29, 0.08);
+      --shadow-hover: 0 28px 70px rgba(23, 26, 29, 0.14);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "Inter", Arial, sans-serif;
+      --max-width: 1200px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent-light);
+      outline-offset: 4px;
+    }
+
+    .page-shell {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-shell::before {
+      content: "";
+      position: absolute;
+      top: -12rem;
+      right: -10rem;
+      width: 38rem;
+      height: 38rem;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(154, 119, 80, 0.13) 0%,
+        rgba(154, 119, 80, 0.04) 35%,
+        transparent 72%
+      );
+      pointer-events: none;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      padding: 5rem 0 6rem;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--line-strong),
+        transparent
+      );
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: end;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent-deep);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 2.6rem;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.75;
+    }
+
+    .hero-title {
+      max-width: 920px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(4.4rem, 13vw, 10rem);
+      font-weight: 600;
+      letter-spacing: -0.065em;
+      line-height: 0.88;
+      color: var(--ink);
+    }
+
+    .hero-title span {
+      display: block;
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      max-width: 42rem;
+      margin: 2.5rem 0 0;
+      color: var(--ink-soft);
+      font-size: clamp(1rem, 1.8vw, 1.18rem);
+      line-height: 1.9;
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 2rem;
+      color: var(--ink-soft);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-note::before {
+      content: "↓";
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    .archive-section {
+      padding: 7rem 0;
+    }
+
+    .section-intro {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-label {
+      margin: 0;
+      color: var(--accent-deep);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      line-height: 1;
+    }
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      border-top: 1px solid var(--line-strong);
+      border-left: 1px solid var(--line);
+    }
+
+    .archive-card {
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      background: transparent;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      transition:
+        background-color 300ms ease,
+        transform 300ms ease,
+        box-shadow 300ms ease;
+    }
+
+    .archive-card:hover {
+      background: var(--surface);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-index {
+      margin-bottom: auto;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+
+    .archive-card h3 {
+      margin: 3rem 0 0.9rem;
+      font-family: var(--serif);
+      font-size: clamp(1.75rem, 3vw, 2.2rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .archive-card p {
+      max-width: 31rem;
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.96rem;
+      line-height: 1.8;
+    }
+
+    .archive-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .archive-button {
+      min-height: 4.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.1rem 1.35rem;
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition:
+        transform 250ms ease,
+        border-color 250ms ease,
+        background-color 250ms ease,
+        box-shadow 250ms ease;
+    }
+
+    .archive-button::after {
+      content: "↗";
+      color: var(--accent);
+      font-size: 1.2rem;
+      transition: transform 250ms ease;
+    }
+
+    .archive-button:hover {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--paper);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .archive-button:hover::after {
+      color: var(--accent-light);
+      transform: translate(2px, -2px);
+    }
+
+    .feature-section {
+      padding: 1rem 0 7rem;
+    }
+
+    .feature {
+      position: relative;
+      padding: clamp(2rem, 7vw, 6rem);
+      background: var(--ink);
+      color: var(--paper);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .feature::before {
+      content: "";
+      position: absolute;
+      top: -12rem;
+      right: -10rem;
+      width: 32rem;
+      height: 32rem;
+      border-radius: 50%;
+      border: 1px solid rgba(215, 194, 160, 0.14);
+      box-shadow:
+        0 0 0 5rem rgba(215, 194, 160, 0.025),
+        0 0 0 10rem rgba(215, 194, 160, 0.018);
+      pointer-events: none;
+    }
+
+    .feature-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+
+    .feature-label {
+      margin: 0 0 1.5rem;
+      color: var(--accent-light);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .feature h2 {
+      max-width: 780px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 7vw, 6rem);
+      font-weight: 500;
+      letter-spacing: -0.055em;
+      line-height: 0.95;
+    }
+
+    .feature p {
+      max-width: 760px;
+      margin: 2rem 0 0;
+      color: rgba(245, 241, 232, 0.72);
+      font-size: clamp(1rem, 1.8vw, 1.16rem);
+      line-height: 1.9;
+    }
+
+    .feature-rule {
+      width: 4rem;
+      height: 1px;
+      margin-top: 3rem;
+      background: var(--accent-light);
+    }
+
+    footer {
+      background: #101214;
+      color: var(--paper);
+    }
+
+    .footer-main {
+      padding: 5rem 0 2rem;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(245, 241, 232, 0.14);
+    }
+
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      font-weight: 500;
+      letter-spacing: -0.05em;
+      line-height: 1;
+    }
+
+    .footer-description {
+      max-width: 34rem;
+      margin: 1rem 0 0;
+      color: rgba(245, 241, 232, 0.55);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    .footer-identity {
+      display: grid;
+      gap: 1px;
+      background: rgba(245, 241, 232, 0.12);
+      border: 1px solid rgba(245, 241, 232, 0.12);
+    }
+
+    .identity-link {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      padding: 1.25rem;
+      background: #101214;
+      color: var(--paper);
+      text-decoration: none;
+      transition:
+        background-color 250ms ease,
+        color 250ms ease;
+    }
+
+    .identity-link:hover {
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .identity-label {
+      color: var(--accent-light);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .identity-value {
+      overflow-wrap: anywhere;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .identity-code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 0.8rem;
+      letter-spacing: -0.02em;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-top: 2rem;
+      color: rgba(245, 241, 232, 0.45);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .footer-status::before {
+      content: "";
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        width: min(calc(100% - 3rem), var(--max-width));
+      }
+
+      .archive-actions {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
       }
     }
-  ]
-}
-    </script>
 
-<style>
+    @media (min-width: 768px) {
+      .hero {
+        min-height: 88vh;
+      }
 
-:root{
-    --gold:#d4af37;
-    --gold-light:#f5e7a1;
-    --black:#050505;
-    --card:#0d0d0d;
-    --border:rgba(212,175,55,.25);
-}
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.3fr) minmax(220px, 0.7fr);
+      }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+      .hero-note {
+        justify-self: end;
+        align-self: end;
+        max-width: 15rem;
+      }
 
-body{
-    background:radial-gradient(circle at top,
-    #111 0%,
-    #080808 30%,
-    #000 100%);
-    color:#f5f5f5;
-    font-family:'Cormorant Garamond', serif;
-    min-height:100vh;
-    overflow-x:hidden;
-}
+      .section-intro {
+        grid-template-columns: minmax(180px, 0.45fr) 1.55fr;
+        align-items: start;
+      }
 
-body::before{
-    content:'';
-    position:fixed;
-    width:700px;
-    height:700px;
-    background:radial-gradient(circle,
-    rgba(212,175,55,.08),
-    transparent 70%);
-    top:-250px;
-    left:50%;
-    transform:translateX(-50%);
-    pointer-events:none;
-}
+      .archive-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-.hero{
-    text-align:center;
-    padding:140px 20px 100px;
-}
+      .footer-top {
+        grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+        align-items: end;
+      }
+    }
 
-.logo{
-    font-family:'Playfair Display', serif;
-    font-size:6rem;
-    letter-spacing:10px;
-    font-weight:700;
+    @media (min-width: 1100px) {
+      .archive-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
 
-    background:linear-gradient(
-    180deg,
-    #fff7d1,
-    #f8d56c,
-    #d4af37,
-    #8b6b11);
+      .archive-card {
+        min-height: 380px;
+      }
+    }
 
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-
-    text-shadow:
-    0 0 25px rgba(212,175,55,.35);
-}
-
-.subtitle{
-    margin-top:15px;
-    letter-spacing:6px;
-    color:#b99a37;
-    text-transform:uppercase;
-    font-size:1rem;
-}
-
-.tagline{
-    max-width:900px;
-    margin:40px auto 0;
-    font-size:1.5rem;
-    line-height:1.8;
-    color:#d8d8d8;
-}
-
-.section{
-    width:90%;
-    max-width:1400px;
-    margin:auto;
-    padding:80px 0;
-}
-
-.section-title{
-    text-align:center;
-    font-size:3rem;
-    margin-bottom:60px;
-
-    background:linear-gradient(
-    180deg,
-    #fff8d7,
-    #d4af37);
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:35px;
-}
-
-.card{
-    background:linear-gradient(
-    145deg,
-    rgba(255,255,255,.03),
-    rgba(212,175,55,.04));
-
-    border:1px solid var(--border);
-
-    border-radius:24px;
-    padding:40px;
-
-    backdrop-filter:blur(20px);
-
-    transition:.4s ease;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-
-    box-shadow:
-    0 0 40px rgba(212,175,55,.15),
-    inset 0 0 40px rgba(212,175,55,.04);
-}
-
-.card h3{
-    font-size:2rem;
-    margin-bottom:15px;
-
-    background:linear-gradient(
-    180deg,
-    #fff4c7,
-    #d4af37);
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.card p{
-    font-size:1.2rem;
-    line-height:1.8;
-    color:#d4d4d4;
-}
-
-.feature{
-    margin-top:90px;
-
-    border:1px solid var(--border);
-
-    padding:70px;
-    border-radius:30px;
-
-    text-align:center;
-
-    background:
-    linear-gradient(
-    180deg,
-    rgba(212,175,55,.05),
-    rgba(255,255,255,.01));
-}
-
-.feature h2{
-    font-size:4rem;
-    margin-bottom:20px;
-
-    background:linear-gradient(
-    180deg,
-    #fff8d0,
-    #d4af37);
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.feature p{
-    font-size:1.4rem;
-    max-width:900px;
-    margin:auto;
-    line-height:1.8;
-    color:#d7d7d7;
-}
-
-.archive-links{
-    text-align:center;
-    margin-top:50px;
-}
-
-.archive-btn{
-    display:inline-block;
-    margin:15px;
-    padding:18px 35px;
-    border-radius:15px;
-    text-decoration:none;
-    color:#fff;
-    border:1px solid var(--border);
-    background:linear-gradient(
-    145deg,
-    rgba(212,175,55,.15),
-    rgba(255,255,255,.02));
-    transition:.4s ease;
-    font-size:1.1rem;
-}
-
-.archive-btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 0 30px rgba(212,175,55,.25);
-}
-
-footer{
-    margin-top:120px;
-    border-top:1px solid rgba(212,175,55,.15);
-    text-align:center;
-    padding:40px;
-}
-
-.footer-brand{
-    font-size:1.2rem;
-    letter-spacing:5px;
-    color:#d4af37;
-}
-
-.footer-copy{
-    margin-top:10px;
-    color:#999;
-}
-
-@media(max-width:768px){
-
-.logo{
-    font-size:3.5rem;
-    letter-spacing:5px;
-}
-
-.feature h2{
-    font-size:2.5rem;
-}
-
-.archive-btn{
-    display:block;
-    margin:15px auto;
-    max-width:320px;
-}
-
-}
-
-</style>
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="page-shell">
 
-<section class="hero">
+    <main>
+      <section class="hero" aria-labelledby="site-title">
+        <div class="container">
+          <div class="hero-grid">
 
-<h1 class="logo">NVO987</h1>
+            <div>
+              <div class="eyebrow">
+                Software Archive · Digital Preservation · Open Source
+              </div>
 
-<div class="subtitle">
-SOFTWARE ARCHIVE · DIGITAL PRESERVATION · OPEN SOURCE
-</div>
+              <h1 class="hero-title" id="site-title">
+                NVO<span>987</span>
+              </h1>
 
-<p class="tagline">
-NVO987 Software Archive is dedicated to the long-term preservation,
-verification and accessibility of software projects. Through Software Heritage,
-source code repositories are permanently archived to ensure integrity,
-transparency and future availability for developers, researchers and the
-broader open-source community.
-</p>
+              <p class="hero-subtitle">
+                NVO987 Software Archive is dedicated to the long-term preservation,
+                verification and accessibility of software projects. Through Software
+                Heritage, source code repositories are permanently archived to ensure
+                integrity, transparency and future availability for developers,
+                researchers and the broader open-source community.
+              </p>
+            </div>
 
-</section>
+            <div class="hero-note">
+              A permanent record for digital knowledge
+            </div>
 
-<section class="section">
+          </div>
+        </div>
+      </section>
 
-<h2 class="section-title">
-Software Heritage Archives
-</h2>
+      <section class="archive-section" aria-labelledby="archives-title">
+        <div class="container">
 
-<div class="grid">
+          <div class="section-intro">
+            <p class="section-label">Collection 01</p>
 
-<div class="card">
-<h3>SHA-256 Archive</h3>
-<p>
-Permanent Software Heritage archival record preserving the source code,
-revision history and development state of the SHA-256 project for long-term
-public accessibility and verification.
-</p>
-</div>
+            <h2 class="section-title" id="archives-title">
+              Software Heritage Archives
+            </h2>
+          </div>
 
-<div class="card">
-<h3>SHA-3 Archive</h3>
-<p>
-Archived cryptographic software repository maintained through Software
-Heritage, ensuring reproducibility, transparency and historical preservation.
-</p>
-</div>
+          <div class="archive-grid">
 
-<div class="card">
-<h3>Digital Preservation</h3>
-<p>
-Long-term safeguarding of software artifacts, development histories and
-research materials through trusted archival infrastructure.
-</p>
-</div>
+            <article class="archive-card">
+              <div class="card-index">01 / SHA-256</div>
 
-<div class="card">
-<h3>Open Research</h3>
-<p>
-Supporting reproducible software research, source verification and open
-access to historical development records.
-</p>
-</div>
+              <h3>SHA-256 Archive</h3>
 
-</div>
+              <p>
+                Permanent Software Heritage archival record preserving the source code,
+                revision history and development state of the SHA-256 project for
+                long-term public accessibility and verification.
+              </p>
+            </article>
 
-<div class="archive-links">
+            <article class="archive-card">
+              <div class="card-index">02 / SHA-3</div>
 
-<a class="archive-btn"
-href="https://archive.softwareheritage.org/swh:1:dir:c6c1694f69663721534e5ff89765df5c43aceb7e;origin=https://github.com/nvo987-art-history/sha256;visit=swh:1:snp:0e0c7fb168393afa588040a29bcc08aea685882a;anchor=swh:1:rev:4764b4501af5670eccf4bea333befbdfa47598bb"
-target="_blank">
-View SHA-256 Archive
-</a>
+              <h3>SHA-3 Archive</h3>
 
-<a class="archive-btn"
-href="https://archive.softwareheritage.org/swh:1:dir:9ca38a7c579f6514320d6348fda4e13deb84f368;origin=https://github.com/nvo987-art-history/sha3;visit=swh:1:snp:03305f0c4d8de543557650541a9811e685e44cf1;anchor=swh:1:rev:29f507b92f6523555438a8cb950be2824958c864"
-target="_blank">
-View SHA-3 Archive
-</a>
+              <p>
+                Archived cryptographic software repository maintained through Software
+                Heritage, ensuring reproducibility, transparency and historical
+                preservation.
+              </p>
+            </article>
 
-</div>
+            <article class="archive-card">
+              <div class="card-index">03 / Preservation</div>
 
-<div class="feature">
+              <h3>Digital Preservation</h3>
 
-<h2>NVO987 SOFTWARE ARCHIVE</h2>
+              <p>
+                Long-term safeguarding of software artifacts, development histories and
+                research materials through trusted archival infrastructure.
+              </p>
+            </article>
 
-<p>
-A professional repository portal focused on software preservation,
-cryptographic research references and long-term source code archiving.
-By leveraging Software Heritage infrastructure, development artifacts remain
-accessible, verifiable and preserved for future generations of researchers,
-developers and digital historians.
-</p>
+            <article class="archive-card">
+              <div class="card-index">04 / Research</div>
 
-</div>
+              <h3>Open Research</h3>
 
-</section>
+              <p>
+                Supporting reproducible software research, source verification and open
+                access to historical development records.
+              </p>
+            </article>
 
-<footer>
+          </div>
 
-<div class="footer-brand">
-NVO987
-</div>
+          <div class="archive-actions" aria-label="Software archive links">
 
-<div class="footer-copy">
-© 2026 NVO987 Software Archive · All Rights Reserved
-</div>
+            <a
+              class="archive-button"
+              href="https://archive.softwareheritage.org/swh:1:dir:c6c1694f69663721534e5ff89765df5c43aceb7e;origin=https://github.com/nvo987-art-history/sha256;visit=swh:1:snp:0e0c7fb168393afa588040a29bcc08aea685882a;anchor=swh:1:rev:4764b4501af5670eccf4bea333befbdfa47598bb"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>View SHA-256 Archive</span>
+            </a>
 
-</footer>
+            <a
+              class="archive-button"
+              href="https://archive.softwareheritage.org/swh:1:dir:9ca38a7c579f6514320d6348fda4e13deb84f368;origin=https://github.com/nvo987-art-history/sha3;visit=swh:1:snp:03305f0c4d8de543557650541a9811e685e44cf1;anchor=swh:1:rev:29f507b92f6523555438a8cb950be2824958c864"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>View SHA-3 Archive</span>
+            </a>
 
+          </div>
+
+        </div>
+      </section>
+
+      <section class="feature-section" aria-labelledby="feature-title">
+        <div class="container">
+
+          <div class="feature">
+            <div class="feature-content">
+
+              <p class="feature-label">Institutional Archive</p>
+
+              <h2 id="feature-title">
+                NVO987 Software Archive
+              </h2>
+
+              <p>
+                A professional repository portal focused on software preservation,
+                cryptographic research references and long-term source code archiving.
+                By leveraging Software Heritage infrastructure, development artifacts
+                remain accessible, verifiable and preserved for future generations of
+                researchers, developers and digital historians.
+              </p>
+
+              <div class="feature-rule" aria-hidden="true"></div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-main">
+
+        <div class="footer-top">
+
+          <div>
+            <div class="footer-brand">NVO987</div>
+
+            <p class="footer-description">
+              A curated digital archive for the preservation, verification and
+              long-term accessibility of software and research artifacts.
+            </p>
+          </div>
+
+          <div class="footer-identity">
+
+            <a
+              class="identity-link"
+              href="mailto:nvo@nvo987.us"
+              aria-label="Email NVO987 at nvo@nvo987.us"
+            >
+              <span class="identity-label">Correspondence</span>
+              <span class="identity-value">nvo@nvo987.us</span>
+            </a>
+
+            <a
+              class="identity-link"
+              href="https://identity.nvo987.us"
+              target="_blank"
+              rel="me noopener noreferrer"
+              aria-label="Verify DID identity did:web:identity.nvo987.us"
+            >
+              <span class="identity-label">Verifiable Digital Identity</span>
+              <code class="identity-value identity-code">
+                did:web:identity.nvo987.us
+              </code>
+            </a>
+
+            <a
+              class="identity-link"
+              href="https://www.nvo987.us"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit www.nvo987.us"
+            >
+              <span class="identity-label">Official Website</span>
+              <span class="identity-value">www.nvo987.us</span>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 NVO987 Software Archive · All Rights Reserved</span>
+          <span class="footer-status">Preservation · Identity · Continuity</span>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
 </body>
-</html>
+			</html>
