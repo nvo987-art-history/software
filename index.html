@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NVO987 Software Archive | Software Heritage Preservation | Nicholas Van-Orton</title>
+
+  <meta
+    name="description"
+    content="NVO987 Software Archive — a collection of independently accessible web applications and cryptographic software utilities maintained under the NVO987 digital namespace."
+  >
+  <meta
+    name="keywords"
+    content="NVO987, Nicholas Van-Orton, software archive, web applications, cryptography, SHA-256, SHA-1, SHA-512, SHA3, Keccak, BLAKE, JSON, XML, UUID, QR"
+  >
+  <meta name="author" content="Nicholas Van-Orton">
+  <meta name="creator" content="Nicholas Van-Orton">
+  <meta name="robots" content="index, follow">
+
+  <meta name="theme-color" content="#111111">
+  <meta name="color-scheme" content="light">
+
+  <link rel="canonical" href="https://software.nvo987.us">
+
+  <link rel="me" href="https://www.nvo987.us">
+
+  <meta name="did" content="did:web:identity.nvo987.us">
+  <link rel="alternate" type="application/did+ld+json" href="https://identity.nvo987.us/.well-known/did.json">
+
+  <link rel="icon" href="https://www.nvo987.us/favicon.ico">
+  <link rel="manifest" href="/manifest.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://software.nvo987.us">
+  <meta property="og:title" content="NVO987 Software Archive">
+  <meta
+    property="og:description"
+    content="A collection of independent web applications maintained under the NVO987 digital namespace."
+  >
+  <meta property="og:site_name" content="NVO987">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="NVO987 Software Archive">
+  <meta
+    name="twitter:description"
+    content="A collection of independent web applications maintained under the NVO987 digital namespace."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --black: #111111;
+      --black-soft: #1a1a1a;
+      --orange: #ff6a00;
+      --orange-dark: #e85f00;
+      --yellow: #f5a400;
+      --yellow-light: #fff1bf;
+      --white: #ffffff;
+      --gray-100: #f5f5f5;
+      --gray-200: #e8e8e8;
+      --gray-400: #999999;
+      --gray-600: #666666;
+
+      --max-width: 1180px;
+      --side-padding: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--black);
+      font-family: "Inter", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      min-height: 100vh;
+      background: var(--white);
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       BANNER
+       ========================================================= */
+
+    .nvo-banner {
+      position: relative;
+      min-height: 290px;
+      overflow: hidden;
+      background: var(--black);
+      border-bottom: 8px solid var(--yellow);
+      display: flex;
+      align-items: center;
+    }
+
+    .nvo-banner::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: -100px;
+      width: 52%;
+      height: 450px;
+
+      background:
+        linear-gradient(
+          135deg,
+          transparent 0 16%,
+          var(--yellow) 16% 24%,
+          transparent 24% 36%,
+          var(--orange) 36% 46%,
+          transparent 46% 58%,
+          var(--yellow) 58% 66%,
+          transparent 66%
+        );
+
+      transform: skewX(-18deg);
+      opacity: 0.95;
+    }
+
+    .nvo-banner::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 190px;
+      height: 12px;
+      background: var(--orange);
+    }
+
+    .nvo-banner-inner {
+      position: relative;
+      z-index: 2;
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 58px 0;
+    }
+
+    .nvo-banner-label {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 8px 13px;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .nvo-banner h1 {
+      max-width: 800px;
+      margin: 0;
+      color: var(--white);
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 0.94;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+    }
+
+    .nvo-banner h1 span {
+      color: var(--orange);
+    }
+
+    .nvo-banner-description {
+      max-width: 680px;
+      margin: 24px 0 0;
+      color: #dddddd;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       APPLICATION DIRECTORY
+       ========================================================= */
+
+    .nvo-applications {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 70px 0 85px;
+    }
+
+    .nvo-directory-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 36px;
+      padding-bottom: 22px;
+      border-bottom: 3px solid var(--black);
+    }
+
+    .nvo-directory-kicker {
+      margin: 0 0 9px;
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .nvo-directory-header h2 {
+      margin: 0;
+      color: var(--black);
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.045em;
+    }
+
+    .nvo-directory-count {
+      flex-shrink: 0;
+      padding: 11px 15px;
+      background: var(--yellow-light);
+      border-left: 5px solid var(--yellow);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       APPLICATION CARDS
+       ========================================================= */
+
+    .nvo-app-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .nvo-app-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 245px;
+      padding: 29px;
+      overflow: hidden;
+
+      background: var(--white);
+      border: 2px solid var(--black);
+
+      color: var(--black);
+      text-decoration: none;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .nvo-app-card::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: 58px;
+      height: 7px;
+      background: var(--orange);
+    }
+
+    .nvo-app-card:hover {
+      background: var(--black);
+      color: var(--white);
+      transform: translateY(-5px);
+      box-shadow: 8px 8px 0 var(--yellow);
+    }
+
+    .nvo-app-number {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+    }
+
+    .nvo-app-card h3 {
+      margin: 38px 0 10px;
+      color: inherit;
+      font-size: 25px;
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: -0.035em;
+    }
+
+    .nvo-app-domain {
+      margin: 0 0 24px;
+      color: var(--gray-600);
+      font-family: monospace;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .nvo-app-card:hover .nvo-app-domain {
+      color: #cccccc;
+    }
+
+    .nvo-app-open {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-top: auto;
+      padding-top: 15px;
+
+      border-top: 1px solid var(--gray-200);
+
+      color: inherit;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .nvo-app-card:hover .nvo-app-open {
+      border-color: #444444;
+    }
+
+    .nvo-app-open span:last-child {
+      color: var(--orange);
+      font-size: 19px;
+      line-height: 1;
+    }
+
+
+    /* =========================================================
+       INFORMATION STRIP
+       ========================================================= */
+
+    .nvo-info-strip {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      margin-top: 56px;
+      border: 2px solid var(--black);
+    }
+
+    .nvo-info-block {
+      min-height: 140px;
+      padding: 26px;
+      border-right: 2px solid var(--black);
+    }
+
+    .nvo-info-block:last-child {
+      border-right: 0;
+    }
+
+    .nvo-info-block:nth-child(2) {
+      background: var(--yellow-light);
+    }
+
+    .nvo-info-block:nth-child(3) {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .nvo-info-label {
+      margin: 0 0 11px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .nvo-info-block p:last-child {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .footer-inner {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 55px 0 30px;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 45px;
+      border-bottom: 1px solid #333333;
+    }
+
+    .footer-brand {
+      margin: 0 0 13px;
+      color: var(--white);
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+    }
+
+    .footer-description {
+      max-width: 430px;
+      margin: 0;
+      color: #aaaaaa;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer-column-title {
+      margin: 0 0 15px;
+      color: var(--yellow);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .footer-column p {
+      margin: 0 0 7px;
+      color: #bbbbbb;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer-column a {
+      color: #bbbbbb;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--orange);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      padding-top: 25px;
+    }
+
+    .footer-copyright {
+      margin: 0;
+      color: #777777;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .footer-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #999999;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-status::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .nvo-app-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nvo-info-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .nvo-info-block {
+        border-right: 0;
+        border-bottom: 2px solid var(--black);
+      }
+
+      .nvo-info-block:last-child {
+        border-bottom: 0;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-main > :first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+
+    @media (max-width: 620px) {
+
+      :root {
+        --side-padding: 15px;
+      }
+
+      .nvo-banner {
+        min-height: 245px;
+      }
+
+      .nvo-banner-inner {
+        width: calc(100% - 30px);
+        padding: 46px 0;
+      }
+
+      .nvo-banner::before {
+        right: -190px;
+        width: 85%;
+        opacity: 0.75;
+      }
+
+      .nvo-banner h1 {
+        font-size: clamp(42px, 14vw, 62px);
+      }
+
+      .nvo-banner-description {
+        max-width: 500px;
+        font-size: 14px;
+      }
+
+      .nvo-applications {
+        width: calc(100% - 30px);
+        padding: 48px 0 60px;
+      }
+
+      .nvo-directory-header {
+        display: block;
+      }
+
+      .nvo-directory-count {
+        display: inline-block;
+        margin-top: 18px;
+      }
+
+      .nvo-app-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nvo-app-card {
+        min-height: 220px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-main > :first-child {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <div class="page-shell">
+
+    <!-- =======================================================
+         NVO987 SOFTWARE APPLICATION DIRECTORY
+         ======================================================= -->
+
+    <main>
+
+      <!-- BANNER -->
+
+      <section class="nvo-banner">
+        <div class="nvo-banner-inner">
+
+          <div class="nvo-banner-label">
+            NVO987 / Software
+          </div>
+
+          <h1>
+            Web Applications<br>
+            <span>Collection</span>
+          </h1>
+
+          <p class="nvo-banner-description">
+            Independent web applications available through the NVO987
+            digital namespace.
+          </p>
+
+        </div>
+      </section>
+
+
+      <!-- APPLICATION DIRECTORY -->
+
+      <section class="nvo-applications">
+
+        <header class="nvo-directory-header">
+
+          <div>
+            <p class="nvo-directory-kicker">
+              Application Directory
+            </p>
+
+            <h2>
+              NVO987 Applications
+            </h2>
+          </div>
+
+          <div class="nvo-directory-count">
+            11 Applications
+          </div>
+
+        </header>
+
+
+        <div class="nvo-app-grid">
+
+
+          <!-- 01 -->
+
+          <a
+            class="nvo-app-card"
+            href="https://favicon.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="nvo-app-number">01</div>
+
+            <h3>Favicon</h3>
+
+            <p class="nvo-app-domain">
+              favicon.nvo987.us
+            </p>
+
+            <div class="nvo-app-open">
+              <span>Open Application</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+
+          <!-- 02 -->
+
+          <a
+            class="nvo-app-card"
+            href="https://keccak.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="nvo-app-number">02</div>
+
+            <h3>Keccak-256 &amp; Whirlpool</h3>
+
+            <p class="nvo-app-domain">
+              keccak.nvo987.us
+            </p>
+
+            <div class="nvo-app-open">
+              <span>Open Application</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+
+          <!-- 03 -->
+
+          <a
+            class="nvo-app-card"
+            href="https://blake.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="nvo-app-number">03</div>
+
+            <h3>BLAKE2 &amp; BLAKE3</h3>
+
+            <p class="nvo-app-domain">
+              blake.nvo987.us
+            </p>
+
+            <div class="nvo-app-open">
+              <span>Open Application</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+
+          <!-- 04 -->
+
+          <a
+            class="nvo-app-card"
+            href="https://sha1.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="nvo-app-number">04</div>
+
+            <h3>SHA-1</h3>
+
+            <p class="nvo-app-domain">
+              sha1.nvo987.us
+            </p>
+
+            <div class="nvo-app-open">
+              <span>Open Application</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+
+          <!-- 05 -->
+
+          <a
+            class="nvo-app-card"
+            href="https://sha512.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="nvo-app-number">05</div>
+
+            <h3>SHA-512</h3>
+
+            <p class="nvo-app-domain">
+              sha512.nvo987.us
+            </p>
+
+            <div class="nvo-app-open">
+              <span>Open Application</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+
+          <!-- 06 -->
+
+          <a
+            class="nvo-app-card"
+            href="https://sha3.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="nvo-app-number">06</div>
+
+            <h3>SHA3-256</h3>
+
+            <p class="nvo-app-domain">
+              sha3.nvo987.us
+            </p>
+
+            <div class="nvo-app-open">
+              <span>Open Application</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+
+          <!-- 07 -->
+
+          <a
+            class="nvo-app-card"
+            href="https://json.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="nvo-app-number">07</div>
+
+            <h3>JSON &amp; XML</h3>
+
+            <p class="nvo-app-domain">
+              json.nvo987.us
+            </p>
+
+            <div class="nvo-app-open">
+              <span>Open Application</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+
+          <!-- 08 -->
+
+          <a
+            class="nvo-app-card"
+            href="https://sha256.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="nvo-app-number">08</div>
+
+            <h3>SHA-256</h3>
+
+            <p class="nvo-app-domain">
+              sha256.nvo987.us
+            </p>
+
+            <div class="nvo-app-open">
+              <span>Open Application</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+
+          <!-- 09 -->
+
+          <a
+            class="nvo-app-card"
+            href="https://uuid.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="nvo-app-number">09</div>
+
+            <h3>UUID Generator</h3>
+
+            <p class="nvo-app-domain">
+              uuid.nvo987.us
+            </p>
+
+            <div class="nvo-app-open">
+              <span>Open Application</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+
+          <!-- 10 -->
+
+          <a
+            class="nvo-app-card"
+            href="https://qr.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="nvo-app-number">10</div>
+
+            <h3>QR Code Generator</h3>
+
+            <p class="nvo-app-domain">
+              qr.nvo987.us
+            </p>
+
+            <div class="nvo-app-open">
+              <span>Open Application</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+
+          <!-- 11 -->
+
+          <a
+            class="nvo-app-card"
+            href="https://sha.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="nvo-app-number">11</div>
+
+            <h3>SHA Suite</h3>
+
+            <p class="nvo-app-domain">
+              sha.nvo987.us
+            </p>
+
+            <div class="nvo-app-open">
+              <span>Open Application</span>
+              <span>↗</span>
+            </div>
+          </a>
+
+
+        </div>
+
+
+        <!-- INFORMATION STRIP -->
+
+        <div class="nvo-info-strip">
+
+          <div class="nvo-info-block">
+
+            <p class="nvo-info-label">
+              NVO987
+            </p>
+
+            <p>
+              A collection of independently accessible web applications
+              maintained under the NVO987 namespace.
+            </p>
+
+          </div>
+
+
+          <div class="nvo-info-block">
+
+            <p class="nvo-info-label">
+              Access
+            </p>
+
+            <p>
+              Each application has its own dedicated subdomain and can
+              be opened independently.
+            </p>
+
+          </div>
+
+
+          <div class="nvo-info-block">
+
+            <p class="nvo-info-label">
+              Directory
+            </p>
+
+            <p>
+              Select an application above to continue.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =======================================================
+         FOOTER
+         ======================================================= -->
+
+    <footer>
+
+      <div class="footer-inner">
+
+        <div class="footer-main">
+
+          <div>
+
+            <div class="footer-brand">
+              NVO987
+            </div>
+
+            <p class="footer-description">
+              Independent software and web applications maintained
+              under the NVO987 digital namespace.
+            </p>
+
+          </div>
+
+
+          <div class="footer-column">
+
+            <p class="footer-column-title">
+              Contact
+            </p>
+
+            <p>
+              <a href="mailto:nvo@nvo987.us">
+                nvo@nvo987.us
+              </a>
+            </p>
+
+            <p>
+              <a
+                href="https://www.nvo987.us"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                www.nvo987.us
+              </a>
+            </p>
+
+          </div>
+
+
+          <div class="footer-column">
+
+            <p class="footer-column-title">
+              Identity
+            </p>
+
+            <p>
+              <a
+                href="https://identity.nvo987.us"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                did:web:identity.nvo987.us
+              </a>
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+          <p class="footer-copyright">
+            © 2026 Nicholas Van-Orton / NVO987
+          </p>
+
+          <div class="footer-status">
+            NVO987 Software Archive
+          </div>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+              </html>
