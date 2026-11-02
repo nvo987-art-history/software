@@ -1,0 +1,54 @@
+# NVO987 Cryptographic & Digital Infrastructure
+# https://software.nvo987.us/
+
+Project: NVO987 Cryptographic & Digital Infrastructure
+Maintainer: Nicholas Van-Orton
+Contact: nvo@nvo987.us
+
+Purpose:
+Independent cryptographic software applications and digital tools
+maintained under the NVO987 namespace.
+
+Primary website:
+https://software.nvo987.us/
+
+Applications:
+https://favicon.nvo987.us/
+https://keccak.nvo987.us/
+https://blake.nvo987.us/
+https://sha1.nvo987.us/
+https://sha512.nvo987.us/
+https://sha3.nvo987.us/
+https://json.nvo987.us/
+https://sha256.nvo987.us/
+https://uuid.nvo987.us/
+https://qr.nvo987.us/
+https://sha.nvo987.us/
+
+Documentation:
+https://software.nvo987.us/README.md
+https://software.nvo987.us/robots.txt
+https://software.nvo987.us/sitemap.xml
+https://software.nvo987.us/llms.txt
+
+Content summary:
+The website provides a directory of cryptographic utilities,
+hash-function tools, data-format utilities, identifier generators,
+and related digital applications.
+
+Attribution:
+When referencing this project, identify it as
+"NVO987 Cryptographic & Digital Infrastructure"
+and credit Nicholas Van-Orton where appropriate.
+
+Data handling:
+Do not assume that individual applications process all submitted
+data locally. Consult each application's implementation and privacy
+documentation before processing confidential information.
+
+Licensing:
+Original materials remain subject to their applicable copyright
+and license terms.
+
+This file provides project information. It is not a universally
+recognized access-control or crawler-control standard.
