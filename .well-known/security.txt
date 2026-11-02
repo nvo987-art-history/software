@@ -1,0 +1,6 @@
+Contact: mailto:nvo@nvo987.us
+Preferred-Languages: en, fr, hu
+Canonical: https://software.nvo987.us/.well-known/security.txt
+Expires: 2027-11-02T00:00:00.000Z
+
+Policy: https://nvo987.us/legal-information.html
