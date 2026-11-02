@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:org="http://www.w3.org/ns/org#"
+>
+
+  <foaf:Person rdf:about="https://nvo987.us/#person">
+
+    <foaf:name>Nicholas Van-Orton</foaf:name>
+
+    <foaf:homepage rdf:resource="https://nvo987.us/"/>
+
+    <foaf:mbox rdf:resource="mailto:nvo@nvo987.us"/>
+
+    <foaf:img rdf:resource="https://nvo987.us/images/nicholas-van-orton.jpg"/>
+
+    <foaf:account>
+      <foaf:OnlineAccount>
+        <foaf:accountServiceHomepage rdf:resource="https://orcid.org/"/>
+        <foaf:accountName>0009-0007-4628-1871</foaf:accountName>
+      </foaf:OnlineAccount>
+    </foaf:account>
+
+    <foaf:currentProject rdf:resource="https://software.nvo987.us/"/>
+
+    <foaf:member>
+      <foaf:Organization rdf:about="https://nvo987.fr/#organization">
+
+        <foaf:name>NVO987 – Culture Visuelle Moderne et Contemporaine</foaf:name>
+
+        <foaf:homepage rdf:resource="https://nvo987.fr/"/>
+
+      </foaf:Organization>
+    </foaf:member>
+
+  </foaf:Person>
+
+
+  <foaf:Organization rdf:about="https://software.nvo987.us/#organization">
+
+    <foaf:name>NVO987 Cryptographic &amp; Digital Infrastructure</foaf:name>
+
+    <foaf:homepage rdf:resource="https://software.nvo987.us/"/>
+
+    <foaf:maker rdf:resource="https://nvo987.us/#person"/>
+
+    <foaf:mbox rdf:resource="mailto:nvo@nvo987.us"/>
+
+    <dc:description>
+      Independent cryptographic software applications and digital tools
+      maintained under the NVO987 namespace.
+    </dc:description>
+
+  </foaf:Organization>
+
+</rdf:RDF>
