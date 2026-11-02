@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://software.nvo987.us/sitemap.xml
