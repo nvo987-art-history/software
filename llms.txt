@@ -1,0 +1,81 @@
+# NVO987 Cryptographic & Digital Infrastructure
+
+> Independent cryptographic software applications and digital tools
+> maintained under the NVO987 namespace.
+
+## Overview
+
+NVO987 Cryptographic & Digital Infrastructure is a directory of
+web-based software utilities maintained under the NVO987 namespace.
+
+The website provides access to independent applications for
+cryptographic hashing, data-format processing, identifier generation,
+and related digital tasks.
+
+- Website: https://software.nvo987.us/
+- Maintainer: Nicholas Van-Orton
+- Contact: nvo@nvo987.us
+- Main website: https://nvo987.us/
+- Identity infrastructure: https://identity.nvo987.us/
+
+## Applications
+
+- [Favicon](https://favicon.nvo987.us/): Favicon-related utility.
+- [Keccak-256 and Whirlpool](https://keccak.nvo987.us/): Hash utilities.
+- [BLAKE2 and BLAKE3](https://blake.nvo987.us/): Hash utilities.
+- [SHA-1](https://sha1.nvo987.us/): SHA-1 hashing utility.
+- [SHA-512](https://sha512.nvo987.us/): SHA-512 hashing utility.
+- [SHA3-256](https://sha3.nvo987.us/): SHA3-256 hashing utility.
+- [JSON and XML](https://json.nvo987.us/): Data-format utilities.
+- [SHA-256](https://sha256.nvo987.us/): SHA-256 hashing utility.
+- [UUID Generator](https://uuid.nvo987.us/): UUID generation utility.
+- [QR Code Generator](https://qr.nvo987.us/): QR code generation utility.
+- [SHA Suite](https://sha.nvo987.us/): SHA-related utilities.
+
+## Documentation
+
+- [Project README](https://software.nvo987.us/README.md)
+- [Crawler directives](https://software.nvo987.us/robots.txt)
+- [XML sitemap](https://software.nvo987.us/sitemap.xml)
+- [RSS feed](https://software.nvo987.us/rss.xml)
+- [Atom feed](https://software.nvo987.us/atom.xml)
+- [AI information](https://software.nvo987.us/ai.txt)
+- [Security policy contact](https://software.nvo987.us/.well-known/security.txt)
+
+## Cryptographic Notes
+
+SHA-1 is not recommended for applications requiring modern collision
+resistance.
+
+SHA-256, SHA-512, SHA3-256, Keccak, BLAKE2, and BLAKE3 have different
+technical properties and should not be treated as interchangeable.
+
+Hashing is not encryption. A cryptographic hash generally cannot be
+reversed to recover its input.
+
+The actual behavior, security, and privacy properties of each
+application must be verified against its implementation.
+
+## Data and Privacy
+
+Do not assume that all application inputs are processed locally.
+
+Users should consult each application's implementation and privacy
+documentation before submitting sensitive data.
+
+## Licensing and Attribution
+
+Original project materials remain subject to applicable copyright
+and license terms.
+
+When referencing this project, use the name
+"NVO987 Cryptographic & Digital Infrastructure".
+
+Credit Nicholas Van-Orton where appropriate.
+
+## Related Resources
+
+- [NVO987](https://nvo987.us/)
+- [NEXARIUM](https://nexarium.us/)
+- [NVO987 Identity](https://identity.nvo987.us/)
+- [NVO987 Legal Information](https://nvo987.us/legal-information.html)
