@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>NVO987 Cryptographic &amp; Digital Infrastructure</title>
+
+  <id>https://software.nvo987.us/</id>
+
+  <link
+    href="https://software.nvo987.us/"
+    rel="alternate"
+    type="text/html"
+  />
+
+  <link
+    href="https://software.nvo987.us/atom.xml"
+    rel="self"
+    type="application/atom+xml"
+  />
+
+  <updated>2026-11-02T00:00:00Z</updated>
+
+  <author>
+    <name>Nicholas Van-Orton</name>
+    <email>nvo@nvo987.us</email>
+    <uri>https://nvo987.us/</uri>
+  </author>
+
+  <subtitle>
+    Independent cryptographic software applications and digital tools
+    maintained under the NVO987 namespace.
+  </subtitle>
+
+  <rights>Copyright (c) 2026 Nicholas Van-Orton</rights>
+
+  <entry>
+    <title>NVO987 Cryptographic &amp; Digital Infrastructure</title>
+
+    <id>https://software.nvo987.us/#introduction</id>
+
+    <link
+      href="https://software.nvo987.us/"
+      rel="alternate"
+      type="text/html"
+    />
+
+    <updated>2026-11-02T00:00:00Z</updated>
+
+    <published>2026-11-02T00:00:00Z</published>
+
+    <author>
+      <name>Nicholas Van-Orton</name>
+      <uri>https://nvo987.us/</uri>
+    </author>
+
+    <summary>
+      A directory of independent cryptographic software applications,
+      hash-function utilities, data-format tools, identifier generators,
+      and related digital infrastructure maintained under the NVO987
+      namespace.
+    </summary>
+
+    <content type="html">
+      &lt;p&gt;Explore the NVO987 application directory.&lt;/p&gt;
+      &lt;p&gt;
+        &lt;a href="https://sha256.nvo987.us/"&gt;SHA-256&lt;/a&gt;,
+        &lt;a href="https://sha3.nvo987.us/"&gt;SHA3-256&lt;/a&gt;,
+        &lt;a href="https://blake.nvo987.us/"&gt;BLAKE2 and BLAKE3&lt;/a&gt;,
+        &lt;a href="https://json.nvo987.us/"&gt;JSON and XML&lt;/a&gt;,
+        &lt;a href="https://uuid.nvo987.us/"&gt;UUID Generator&lt;/a&gt;.
+      &lt;/p&gt;
+    </content>
+  </entry>
+
+</feed>
