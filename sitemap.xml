@@ -1,52 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-    <loc>https://software.nvo987.us/</loc>
+    <loc>https://software.nvo987.us</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <url>
-    <loc>https://favicon.nvo987.us/</loc>
-  </url>
-
-  <url>
-    <loc>https://keccak.nvo987.us/</loc>
-  </url>
-
-  <url>
-    <loc>https://blake.nvo987.us/</loc>
-  </url>
-
-  <url>
-    <loc>https://sha1.nvo987.us/</loc>
-  </url>
-
-  <url>
-    <loc>https://sha512.nvo987.us/</loc>
-  </url>
-
-  <url>
-    <loc>https://sha3.nvo987.us/</loc>
-  </url>
-
-  <url>
-    <loc>https://json.nvo987.us/</loc>
-  </url>
-
-  <url>
-    <loc>https://sha256.nvo987.us/</loc>
-  </url>
-
-  <url>
-    <loc>https://uuid.nvo987.us/</loc>
-  </url>
-
-  <url>
-    <loc>https://qr.nvo987.us/</loc>
-  </url>
-
-  <url>
-    <loc>https://sha.nvo987.us/</loc>
-  </url>
-
 </urlset>
